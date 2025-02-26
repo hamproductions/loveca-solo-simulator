@@ -1,0 +1,32 @@
+{
+  "title": "Receipt Parser",
+  "description": "Turn your receipt into spending CSV",
+  "site_name": "Receipt Parser",
+  "dialog": {
+    "close": "Close"
+  },
+  "footer": {
+    "created_by": "Created by",
+    "footer_text": "don't ask for API key",
+    "source_code": "Check out source code on"
+  },
+  "error_page": {
+    "title": "Oopsie",
+    "text": "Sometimes refreshing the page fix it, Clearing the data might also fix it too. If it doesn't ping ",
+    "discord_link": "@hamp on Discord",
+    "to_fix_it": " to fix it.",
+    "copy": "Copy Error Message",
+    "reload": "Reload Page",
+    "clear": "Clear Data and Reload Page"
+  },
+  "api-key": "API Key",
+  "select-files": "Select Files",
+  "receipts-here": "Drop receipts here",
+  "results": "Results",
+  "flip-amount": "Flip Amount",
+  "download": "Download",
+  "remove": "Remove",
+  "download-all": "Download All",
+  "clear": "Clear",
+  "fill-in-api-key": "Fill in the API key"
+}

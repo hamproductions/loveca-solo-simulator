@@ -1,17 +1,20 @@
 {
-  "title": "Kingblade x10iii チューニングツール",
-  "description": "あなたの古いKingblade x10iiiを復旧しましょう。",
-  "set_default_colors": "初期色を設定する",
-  "save_preset": "色を保存する",
-  "scan_qr_code": "QRコード読み取り",
-  "color_settings": "色の設定",
-  "site_name": "Kingbalde x10iiiツール",
+  "title": "ぼっちラブカシミュレーター",
+  "description": "大会当たらないのでソロプレイモードを作りました",
+  "site_name": "ぼっちラブカ",
+  "deck": "デッキ",
+  "select_deck": "デッキを選択する",
+  "turn": "ターン",
+  "score": "スコア",
+  "live_history": "ライブスコア履歴",
+  "reset": "リセット",
+  "start": "スタート",
   "dialog": {
     "close": "閉じる"
   },
   "footer": {
     "created_by": "作者",
-    "footer_text": "アルゴリズムはkGithubのjy00302さんから",
+    "footer_text": "誰かラブカやりません？",
     "source_code": "ソースコード"
   },
   "error_page": {

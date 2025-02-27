@@ -11,7 +11,7 @@ import { useLocalStorage } from '~/hooks/useLocalStorage';
 import { advanceTurn, initGameState, isEnded, livePhase, PRESETS, type GameState } from '~/utils';
 
 const collection = createListCollection({
-  items: PRESETS
+  items: PRESETS.map((a) => a.name)
 });
 
 export function Page() {
@@ -48,8 +48,9 @@ export function Page() {
           <Text>{t('description')}</Text>
           <Select.Root
             value={preset ?? []}
-            multiple={false}
-            onValueChange={({ value }) => setPreset(value)}
+            onValueChange={({ items }) => {
+              setPreset(items);
+            }}
             positioning={{ sameWidth: true }}
             collection={collection}
             width="2xs"
@@ -64,8 +65,8 @@ export function Page() {
             <Select.Positioner>
               <Select.Content>
                 {collection.items.map((item) => (
-                  <Select.Item key={item.name} item={item.name}>
-                    <Select.ItemText>{item.name}</Select.ItemText>
+                  <Select.Item key={item} item={item}>
+                    <Select.ItemText>{item}</Select.ItemText>
                     <Select.ItemIndicator>
                       <FaCheck />
                     </Select.ItemIndicator>
@@ -76,25 +77,24 @@ export function Page() {
           </Select.Root>
           {gameState ? (
             <Stack justifyContent="center" textAlign="center">
-              <Text>
-                {t('turn')} : {gameState.turn}
+              <Text fontSize="xl" fontWeight="bold">
+                {t('turn')} {gameState.turn + 1}
               </Text>
               <Stack justifyContent="center">
                 <Text variant="heading">{t('score')}</Text>
-                <Text>
-                  {gameState.score.you} - {gameState.score.them}
-                </Text>
+                <HStack justifyContent="center" fontSize="7xl">
+                  <Text>{gameState.score.you}</Text>
+                  <Text>-</Text>
+                  <Text>{gameState.score.them}</Text>
+                </HStack>
               </Stack>
-              <Text>
-                {t('live_score')} : {gameState.liveScore}
-              </Text>
               {!isEnded(gameState) && (
-                <HStack>
+                <HStack flexWrap="wrap">
                   {Array(16)
                     .fill(undefined)
                     .map((_, i) => {
                       return (
-                        <Button size="sm" variant="ghost" onClick={selectScore(i)}>
+                        <Button key={i} size="md" variant="subtle" onClick={selectScore(i)}>
                           {i}
                         </Button>
                       );
@@ -102,6 +102,25 @@ export function Page() {
                 </HStack>
               )}
               <Button onClick={reset}>{t('reset')}</Button>
+              {gameState.liveHistory && (
+                <Stack>
+                  <Heading as="h4" fontSize="lg">
+                    {t('live_history')}
+                  </Heading>
+                  {gameState.liveHistory.map((score, turn) => {
+                    return (
+                      <HStack key={turn} justifyContent="center" fontSize="lg">
+                        <Text>
+                          {t('turn')} {turn + 1} :{' '}
+                        </Text>
+                        <Text>{score.you}</Text>
+                        <Text>-</Text>
+                        <Text>{score.them}</Text>
+                      </HStack>
+                    );
+                  })}
+                </Stack>
+              )}
             </Stack>
           ) : (
             <Button onClick={startGame}>{t('start_game')}</Button>

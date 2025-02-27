@@ -1,13 +1,20 @@
 {
-  "title": "Receipt Parser",
-  "description": "Turn your receipt into spending CSV",
-  "site_name": "Receipt Parser",
+  "title": "LoveLive! Official Card game single player mode",
+  "description": "Dice with extra steps, Loveca is fun :)",
+  "site_name": "Loveca mode",
+  "deck": "Deck",
+  "select_deck": "Select Deck",
+  "turn": "Turn",
+  "score": "Score",
+  "live_history": "Live Score History",
+  "reset": "Reset",
+  "start": "Start",
   "dialog": {
     "close": "Close"
   },
   "footer": {
     "created_by": "Created by",
-    "footer_text": "don't ask for API key",
+    "footer_text": "Play Loveca",
     "source_code": "Check out source code on"
   },
   "error_page": {
@@ -18,15 +25,5 @@
     "copy": "Copy Error Message",
     "reload": "Reload Page",
     "clear": "Clear Data and Reload Page"
-  },
-  "api-key": "API Key",
-  "select-files": "Select Files",
-  "receipts-here": "Drop receipts here",
-  "results": "Results",
-  "flip-amount": "Flip Amount",
-  "download": "Download",
-  "remove": "Remove",
-  "download-all": "Download All",
-  "clear": "Clear",
-  "fill-in-api-key": "Fill in the API key"
+  }
 }

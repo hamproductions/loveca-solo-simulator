@@ -3,6 +3,7 @@ import { Box, Container, HStack, Stack } from 'styled-system/jsx';
 import { ColorModeToggle } from '~/components/layout/ColorModeToggle';
 import { Footer } from '~/components/layout/Footer';
 import { LanguageToggle } from '~/components/layout/LanguageToggle';
+import { getAssetUrl } from '~/utils/assets';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,11 +19,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </Container>
       <Footer />
       <Box
-        style={
-          {
-            // ['--bg-image' as 'backgroundImage']: `url('${getAssetUrl('/assets/bg.webp')}')`
-          }
-        }
+        style={{
+          ['--bg-image' as 'backgroundImage']: `url('${getAssetUrl('/assets/bg.webp')}')`
+        }}
         zIndex="0"
         position="fixed"
         top="0"
@@ -30,7 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         w="100vw"
         h="100vh"
         opacity="0.05"
-        backgroundPosition="center"
+        backgroundPosition="top"
         backgroundAttachment="fixed"
         backgroundImage="var(--bg-image)"
         backgroundSize="cover"

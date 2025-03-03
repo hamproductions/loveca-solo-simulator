@@ -25,5 +25,26 @@
     "copy": "エラーメッセージをコピー",
     "reload": "再読み込み",
     "clear": "データをクリアして際読み込み"
-  }
+  },
+  "start_game": "スタート",
+  "decks": {
+    "purple-liella": "紫リエラ",
+    "purple-liella-aggro": "紫リエラアグロ",
+    "niji-lanzhu": "虹ヶ咲ランジュ",
+    "goddess-mirapa": "三神みらぱ",
+    "hasu-midrange": "蓮ミッドレンジ",
+    "liella-midrange": "星ミッドレンジ"
+  },
+  "difficulty": "難易度",
+  "difficulties": {
+    "easy": "甘い",
+    "normal": "常人",
+    "hard": "梢先輩（鬼）",
+    "god": "神"
+  },
+  "current_deck": "現在のデッキ",
+  "live_score": "ライブスコア",
+  "undo": "やり直す",
+  "deck_info": "デッキ詳細",
+  "score_table": "スコア表"
 }

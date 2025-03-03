@@ -1,4 +1,4 @@
-// import { Partytown } from '@builder.io/partytown/react';
+import { Partytown } from '@builder.io/partytown/react';
 import { Metadata } from '~/components/layout/Metadata';
 
 export function Head() {
@@ -6,9 +6,9 @@ export function Head() {
     <>
       <Metadata />
 
-      {/* <script
+      <script
         type="text/partytown"
-        src="https://www.googletagmanager.com/gtag/js?id=G-GWEPPCT889"
+        src="https://www.googletagmanager.com/gtag/js?id=G-SRE7F723Z5"
       ></script>
 
       <script
@@ -20,12 +20,12 @@ export function Head() {
               dataLayer.push(arguments);
           }
           gtag("js", new Date());
-          gtag("config", "G-GWEPPCT889");
+          gtag("config", "G-SRE7F723Z5");
           `
         }}
       />
 
-      <Partytown lib={(import.meta.env.PUBLIC_ENV__BASE_URL ?? '') + '/~partytown/'} /> */}
+      <Partytown lib={(import.meta.env.PUBLIC_ENV__BASE_URL ?? '') + '/~partytown/'} />
     </>
   );
 }

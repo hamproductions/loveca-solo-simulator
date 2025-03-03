@@ -25,5 +25,26 @@
     "copy": "Copy Error Message",
     "reload": "Reload Page",
     "clear": "Clear Data and Reload Page"
-  }
+  },
+  "start_game": "start",
+  "decks": {
+    "purple-liella": "Purple Liella",
+    "purple-liella-aggro": "Purple Liella Aggro",
+    "niji-lanzhu": "Niji Lanzhu",
+    "goddess-mirapa": "Mirapa Goddess",
+    "hasu-midrange": "Hasu Midrange",
+    "liella-midrange": "Liella Midrange"
+  },
+  "difficulty": "Difficulty",
+  "difficulties": {
+    "easy": "Easy",
+    "normal": "Normal",
+    "hard": "Hard",
+    "god": "God"
+  },
+  "current_deck": "Current Deck",
+  "live_score": "Live Score",
+  "undo": "Undo",
+  "deck_info": "Deck Info",
+  "score_table": "Score Table"
 }
